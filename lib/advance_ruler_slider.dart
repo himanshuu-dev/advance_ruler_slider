@@ -261,13 +261,13 @@ class _RulerScaleState extends State<RulerScale> {
 
     final double effectiveMinScrollValue =
         widget.minScrollValue ?? widget.minValue;
-    final double effectiveMaxScrollValue =
-        widget.maxScrollValue ?? widget.maxValue;
+    // final double effectiveMaxScrollValue =
+    //     widget.maxScrollValue ?? widget.maxValue;
 
     final double minAllowedPixelOffset =
         (effectiveMinScrollValue - widget.minValue) * widget.unitSpacing;
-    final double maxAllowedPixelOffset =
-        (effectiveMaxScrollValue - widget.minValue) * widget.unitSpacing;
+    // final double maxAllowedPixelOffset =
+    //     (effectiveMaxScrollValue - widget.minValue) * widget.unitSpacing;
 
     final double totalRange = widget.maxValue - widget.minValue;
     final double totalContentLength =
@@ -654,7 +654,7 @@ class _RulerPainter extends CustomPainter {
 
       final Paint currentTickPaint;
       final double currentTickLength;
-      final double currentTickWidth;
+      // final double currentTickWidth;
 
       if (isSelectedTick && selectedTickColor != null) {
         currentTickPaint = Paint()
@@ -666,13 +666,13 @@ class _RulerPainter extends CustomPainter {
         currentTickLength =
             selectedTickLength ??
             (isMajorTick ? majorTickLength : minorTickLength);
-        currentTickWidth =
-            selectedTickWidth ??
-            (isMajorTick ? majorTickWidth : minorTickWidth);
+        // currentTickWidth =
+        //     selectedTickWidth ??
+        //     (isMajorTick ? majorTickWidth : minorTickWidth);
       } else {
         currentTickPaint = isMajorTick ? majorTickPaint : minorTickPaint;
         currentTickLength = isMajorTick ? majorTickLength : minorTickLength;
-        currentTickWidth = isMajorTick ? majorTickWidth : minorTickWidth;
+        // currentTickWidth = isMajorTick ? majorTickWidth : minorTickWidth;
       }
 
       if (direction == Axis.horizontal) {
@@ -723,12 +723,12 @@ class _RulerPainter extends CustomPainter {
     }
   }
 
-  bool _isCloseToMajorTick(double value) {
-    const double epsilon = 1e-9;
-    final double remainder = value % majorTickInterval;
-    return remainder.abs() < epsilon ||
-        (majorTickInterval - remainder).abs() < epsilon;
-  }
+  // bool _isCloseToMajorTick(double value) {
+  //   const double epsilon = 1e-9;
+  //   final double remainder = value % majorTickInterval;
+  //   return remainder.abs() < epsilon ||
+  //       (majorTickInterval - remainder).abs() < epsilon;
+  // }
 
   @override
   bool shouldRepaint(_RulerPainter oldDelegate) {
