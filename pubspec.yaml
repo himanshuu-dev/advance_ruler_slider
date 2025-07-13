@@ -1,6 +1,6 @@
 name: advance_ruler_slider
 description: "A highly customizable and reusable Flutter ruler/scale slider widget with optional haptic feedback, scroll animations, and custom indicator support."
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/himanshuu-dev/advance_ruler_slider
 
 environment:
